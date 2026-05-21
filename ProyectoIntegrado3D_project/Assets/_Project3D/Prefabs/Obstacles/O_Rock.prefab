@@ -9,16 +9,28 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 41f479cc7e1f92f46b86a7fb40a830f5, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.85637075
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 41f479cc7e1f92f46b86a7fb40a830f5, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.6020568
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 41f479cc7e1f92f46b86a7fb40a830f5, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.85637075
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 41f479cc7e1f92f46b86a7fb40a830f5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.0219965
+      value: 6.054
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 41f479cc7e1f92f46b86a7fb40a830f5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.78
+      value: 2.2174
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 41f479cc7e1f92f46b86a7fb40a830f5, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 5.7302356
+      value: 5.7858
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 41f479cc7e1f92f46b86a7fb40a830f5, type: 3}
       propertyPath: m_LocalRotation.w
@@ -50,7 +62,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 41f479cc7e1f92f46b86a7fb40a830f5, type: 3}
       propertyPath: m_Name
-      value: Roca_PI
+      value: O_Rock
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -84,5 +96,5 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 4.018973, y: 5.6019444, z: 4.65273}
-  m_Center: {x: 0.017373081, y: 1.1414776, z: 0.116353035}
+  m_Size: {x: 3.0765617, y: 5.6019444, z: 3.914355}
+  m_Center: {x: -0.17240223, y: 1.1414777, z: 0.15432033}

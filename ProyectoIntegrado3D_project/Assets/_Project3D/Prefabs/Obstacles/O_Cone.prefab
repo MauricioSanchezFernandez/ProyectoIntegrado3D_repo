@@ -62,7 +62,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: bc3b450d37e6dac4ea7f6870b272a440, type: 3}
       propertyPath: m_Name
-      value: Cono
+      value: O_Cone
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -96,5 +96,5 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.16447423, y: 0.14732869, z: 0.16447423}
-  m_Center: {x: 0, y: 0.07368656, z: 0}
+  m_Size: {x: 0.16447423, y: 0.30420825, z: 0.16447423}
+  m_Center: {x: 0, y: 0.1521261, z: 0}

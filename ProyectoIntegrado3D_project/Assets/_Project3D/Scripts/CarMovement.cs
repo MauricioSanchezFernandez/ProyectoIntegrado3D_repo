@@ -3,12 +3,16 @@ using UnityEngine.InputSystem;
 
 public class CarMovement : MonoBehaviour
 {
-    [Header("Velocidad")]
     public float forwardSpeed = 20f;
     public float turnSpeed = 8f;
 
-    [Header("Límites carretera")]
     public float xLimit = 6f;
+
+    [Header("Speed Increase")]
+    public float speedIncreaseAmount = 2f;
+    public float distanceForIncrease = 100f;
+
+    private float nextDistanceThreshold = 100f;
 
     private Vector2 moveInput;
     private InputSystem_Actions inputActions;
@@ -39,16 +43,24 @@ public class CarMovement : MonoBehaviour
 
     private void Update()
     {
-        // Siempre hacia delante
+        // Movimiento hacia delante
         transform.Translate(Vector3.forward * forwardSpeed * Time.deltaTime);
 
         // Movimiento lateral
         Vector3 pos = transform.position;
         pos.x += moveInput.x * turnSpeed * Time.deltaTime;
-
-        // Limitar carretera
         pos.x = Mathf.Clamp(pos.x, -xLimit, xLimit);
 
         transform.position = pos;
+
+        // Aumento velocidad
+        float distance = transform.position.z;
+
+        if (distance >= nextDistanceThreshold)
+        {
+            forwardSpeed += speedIncreaseAmount;
+
+            nextDistanceThreshold += distanceForIncrease;
+        }
     }
 }

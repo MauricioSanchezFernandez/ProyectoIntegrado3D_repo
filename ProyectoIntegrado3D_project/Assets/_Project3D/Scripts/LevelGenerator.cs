@@ -3,7 +3,12 @@ using UnityEngine;
 
 public class LevelGenerator : MonoBehaviour
 {
+    [Header("Normal Chunks")]
     public GameObject[] chunkPrefabs;
+
+    [Header("Starting Chunks")]
+    public GameObject[] startingChunks;
+
     public Transform player;
 
     public int chunksOnScreen = 5;
@@ -12,6 +17,8 @@ public class LevelGenerator : MonoBehaviour
     private float spawnZ = 0;
 
     private List<GameObject> activeChunks = new List<GameObject>();
+
+    private int chunksSpawned = 0;
 
     void Start()
     {
@@ -41,11 +48,23 @@ public class LevelGenerator : MonoBehaviour
 
     void SpawnChunk()
     {
-        // Elegir chunk aleatorio
-        int randomIndex = Random.Range(0, chunkPrefabs.Length);
+        GameObject chunkToSpawn;
+
+        // Primeros chunks fijos
+        if (chunksSpawned < startingChunks.Length)
+        {
+            chunkToSpawn = startingChunks[chunksSpawned];
+        }
+        else
+        {
+            // Luego chunks aleatorios
+            int randomIndex = Random.Range(0, chunkPrefabs.Length);
+
+            chunkToSpawn = chunkPrefabs[randomIndex];
+        }
 
         GameObject chunk = Instantiate(
-            chunkPrefabs[randomIndex],
+            chunkToSpawn,
             new Vector3(0, 0, spawnZ),
             Quaternion.identity
         );
@@ -53,6 +72,8 @@ public class LevelGenerator : MonoBehaviour
         activeChunks.Add(chunk);
 
         spawnZ += chunkLength;
+
+        chunksSpawned++;
     }
 
     void DeleteOldChunk()
