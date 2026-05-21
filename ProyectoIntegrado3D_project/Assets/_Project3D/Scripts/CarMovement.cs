@@ -6,7 +6,9 @@ public class CarMovement : MonoBehaviour
     public float forwardSpeed = 20f;
     public float turnSpeed = 8f;
 
-    public float xLimit = 6f;
+    [Header("Road Settings")]
+    public Transform roadCenter;
+    public float roadWidth = 6f;
 
     [Header("Speed Increase")]
     public float speedIncreaseAmount = 2f;
@@ -43,23 +45,28 @@ public class CarMovement : MonoBehaviour
 
     private void Update()
     {
-        // Movimiento hacia delante
+        //  movimiento hacia delante
         transform.Translate(Vector3.forward * forwardSpeed * Time.deltaTime);
 
-        // Movimiento lateral
+        //  movimiento lateral RELATIVO A LA CARRETERA
         Vector3 pos = transform.position;
+
         pos.x += moveInput.x * turnSpeed * Time.deltaTime;
-        pos.x = Mathf.Clamp(pos.x, -xLimit, xLimit);
+
+        //  límites basados en el centro de la carretera
+        float leftLimit = roadCenter.position.x - roadWidth;
+        float rightLimit = roadCenter.position.x + roadWidth;
+
+        pos.x = Mathf.Clamp(pos.x, leftLimit, rightLimit);
 
         transform.position = pos;
 
-        // Aumento velocidad
+        //  aumento de velocidad por distancia
         float distance = transform.position.z;
 
         if (distance >= nextDistanceThreshold)
         {
             forwardSpeed += speedIncreaseAmount;
-
             nextDistanceThreshold += distanceForIncrease;
         }
     }

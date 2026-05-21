@@ -8,18 +8,24 @@ public class CameraFollow : MonoBehaviour
 
     public float smoothSpeed = 5f;
 
+    public CameraShake shake;
+
     void LateUpdate()
     {
         Vector3 desiredPosition =
             target.position + offset;
 
+        //  shake añadido aquí (no rompe follow)
+        Vector3 shakeOffset = shake != null ? shake.GetShakeOffset() : Vector3.zero;
+
+        Vector3 finalPosition = desiredPosition + shakeOffset;
+
         transform.position = Vector3.Lerp(
             transform.position,
-            desiredPosition,
+            finalPosition,
             smoothSpeed * Time.deltaTime
         );
 
-        // Mirar al player
         transform.LookAt(target);
     }
 }
