@@ -1,7 +1,8 @@
 using UnityEngine;
 using UnityEngine.InputSystem; // IMPORTANTE (nuevo input system)
+using UnityEngine.SceneManagement;
 
-public class IntroUI : MonoBehaviour
+public class UIPausa : MonoBehaviour
 {
     public GameObject panelIntro;
 
@@ -23,5 +24,10 @@ public class IntroUI : MonoBehaviour
     {
         panelIntro.SetActive(false);
         Time.timeScale = 1f;
+    }
+
+    public void MainMenuButton()
+    {
+        SceneManager.LoadSceneAsync(0);
     }
 }
