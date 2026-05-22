@@ -60,6 +60,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -2716655602892440115, guid: d77ea8cd29af5424a8321b646584593a, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 3646f848420416545bb0353391a43821, type: 2}
+    - target: {fileID: -1094481363004214266, guid: d77ea8cd29af5424a8321b646584593a, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 3646f848420416545bb0353391a43821, type: 2}
     - target: {fileID: 919132149155446097, guid: d77ea8cd29af5424a8321b646584593a, type: 3}
       propertyPath: m_Name
       value: O_Fence2
@@ -68,6 +76,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Obstacle
       objectReference: {fileID: 0}
+    - target: {fileID: 7131508917450655927, guid: d77ea8cd29af5424a8321b646584593a, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 3646f848420416545bb0353391a43821, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
