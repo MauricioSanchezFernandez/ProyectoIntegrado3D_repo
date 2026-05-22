@@ -4,26 +4,21 @@ using UnityEngine.SceneManagement;
 
 public class UIPausa : MonoBehaviour
 {
-    public GameObject panelIntro;
+    public GameObject container;
 
-    void Start()
-    {
-        Time.timeScale = 0f; // pausa el juego
-        panelIntro.SetActive(true);
-    }
-
-    void Update()
+    private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
-        {
-           panelIntro.SetActive(true);
+        { 
+            container.SetActive(true);
             Time.timeScale = 0;
         }
     }
 
-    public void OnContinue()
+
+    public void ResumeButton()
     {
-        panelIntro.SetActive(false);
+        container.SetActive(false);
         Time.timeScale = 1f;
     }
 

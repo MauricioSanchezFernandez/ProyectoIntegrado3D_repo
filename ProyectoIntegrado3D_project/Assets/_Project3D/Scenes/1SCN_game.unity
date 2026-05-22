@@ -209,7 +209,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1959673696}
         m_TargetAssemblyTypeName: UIPausa, Assembly-CSharp
-        m_MethodName: OnContinue
+        m_MethodName: ResumeButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1580,8 +1580,8 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cef8379062661414e85fa4a9b4ec9701, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::IntroUI
-  panelIntro: {fileID: 1796764432}
+  m_EditorClassIdentifier: Assembly-CSharp::UIPausa
+  container: {fileID: 1796764432}
 --- !u!1 &1978787702
 GameObject:
   m_ObjectHideFlags: 0
