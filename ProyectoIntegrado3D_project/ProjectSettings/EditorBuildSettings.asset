@@ -6,10 +6,13 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/_Project3D/Scenes/SCN_1.unity
+    path: Assets/_Project3D/Scenes/0SCN_MainMenu.unity
+    guid: 230d50ec5a1cf33459d1e2923e18909b
+  - enabled: 1
+    path: Assets/_Project3D/Scenes/1SCN_game.unity
     guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 1
-    path: Assets/_Project3D/Scenes/GameOver.unity
+    path: Assets/_Project3D/Scenes/2SCN_GameOver.unity
     guid: a1e6b84e8c308d24787e5d69667447c8
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
