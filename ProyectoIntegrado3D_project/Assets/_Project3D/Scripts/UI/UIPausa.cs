@@ -14,9 +14,10 @@ public class UIPausa : MonoBehaviour
 
     void Update()
     {
-        if (Time.timeScale == 0f && Keyboard.current.anyKey.wasPressedThisFrame)
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
-            OnContinue();
+           panelIntro.SetActive(true);
+            Time.timeScale = 0;
         }
     }
 
