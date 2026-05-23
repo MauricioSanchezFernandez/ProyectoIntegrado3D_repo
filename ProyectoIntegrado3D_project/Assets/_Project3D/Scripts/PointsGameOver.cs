@@ -9,6 +9,6 @@ public class GameOverScore : MonoBehaviour
     {
         int score = PlayerPrefs.GetInt("LastScore", 0);
 
-        scoreText.text = "your ponts are:" + score;
+        scoreText.text = "score:" + score;
     }
 }
