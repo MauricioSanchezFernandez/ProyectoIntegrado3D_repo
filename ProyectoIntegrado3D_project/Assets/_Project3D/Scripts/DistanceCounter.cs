@@ -3,10 +3,12 @@ using TMPro;
 
 public class DistanceCounter : MonoBehaviour
 {
-    public Transform player;
+   public Transform player;
     public TextMeshProUGUI distanceText;
 
     private float startZ;
+
+    public int CurrentMeters { get; private set; }
 
     private void Start()
     {
@@ -17,8 +19,16 @@ public class DistanceCounter : MonoBehaviour
     {
         float distance = player.position.z - startZ;
 
-        int meters = Mathf.FloorToInt(distance);
+        CurrentMeters = Mathf.FloorToInt(distance);
 
-        distanceText.text = meters + " m";
+        distanceText.text = CurrentMeters + " m";
     }
+
+    // Guardar puntuación
+    public void SaveScore()
+    {
+        PlayerPrefs.SetInt("LastScore", CurrentMeters);
+        PlayerPrefs.Save();
+    }
+    
 }
