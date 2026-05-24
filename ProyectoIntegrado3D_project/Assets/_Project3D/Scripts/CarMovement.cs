@@ -15,6 +15,7 @@ public class CarMovement : MonoBehaviour
     public float distanceForIncrease = 100f;
 
     private float nextDistanceThreshold = 100f;
+    private Animator anim;
 
     private Vector2 moveInput;
     private InputSystem_Actions inputActions;
@@ -22,6 +23,7 @@ public class CarMovement : MonoBehaviour
     private void Awake()
     {
         inputActions = new InputSystem_Actions();
+        anim = GetComponent<Animator>();
     }
 
     private void OnEnable()
@@ -60,6 +62,23 @@ public class CarMovement : MonoBehaviour
         pos.x = Mathf.Clamp(pos.x, leftLimit, rightLimit);
 
         transform.position = pos;
+
+        // ANIMACIONES
+        if (moveInput.x < -0.1f)
+        {
+            anim.SetBool("turnLeft", true);
+            anim.SetBool("turnRight", false);
+        }
+        else if (moveInput.x > 0.1f)
+        {
+            anim.SetBool("turnLeft", false);
+            anim.SetBool("turnRight", true);
+        }
+        else
+        {
+            anim.SetBool("turnLeft", false);
+            anim.SetBool("turnRight", false);
+        }
 
         //  aumento de velocidad por distancia
         float distance = transform.position.z;
