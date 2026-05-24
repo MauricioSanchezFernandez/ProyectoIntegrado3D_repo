@@ -1,5 +1,60 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &654565276419559346
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1162010828804356387}
+  - component: {fileID: 1612566084199729070}
+  m_Layer: 0
+  m_Name: KillTrigger
+  m_TagString: Obstacle
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1162010828804356387
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 654565276419559346}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.026176412, y: -0.942277, z: -0.009269637, w: 0.3336809}
+  m_LocalPosition: {x: -0.020312784, y: 3.3006928, z: -0.47491062}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4205835418804127786}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!136 &1612566084199729070
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 654565276419559346}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.65044117
+  m_Height: 9.645638
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.15412802, z: -0.29044303}
 --- !u!1 &2000537999007420986
 GameObject:
   m_ObjectHideFlags: 0
@@ -309,6 +364,61 @@ Transform:
   - {fileID: 1375924716389814787}
   m_Father: {fileID: 511617497834761879}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8702959645998921384
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8669365577437872334}
+  - component: {fileID: 4023309876812328224}
+  m_Layer: 0
+  m_Name: KillTrigger
+  m_TagString: Obstacle
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8669365577437872334
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8702959645998921384}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.017022066, y: -0.65511453, z: -0.013173401, w: -0.755223}
+  m_LocalPosition: {x: 0.53688097, y: 3.3674672, z: -0.32218686}
+  m_LocalScale: {x: 1.189202, y: 1.189202, z: 1.1892021}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 813659872595780382}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!136 &4023309876812328224
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8702959645998921384}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.65044117
+  m_Height: 9.645638
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.15412802, z: -0.29044303}
 --- !u!1001 &233890385888848078
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1080,6 +1190,10 @@ PrefabInstance:
       value: Arbol_Anim (1)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 01c16411711a36149b9b6c6bf47d9a62, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 01c16411711a36149b9b6c6bf47d9a62, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -1113,7 +1227,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 01c16411711a36149b9b6c6bf47d9a62, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8669365577437872334}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 01c16411711a36149b9b6c6bf47d9a62, type: 3}
       insertIndex: -1
@@ -1173,10 +1290,10 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 2.1415267
-  m_Height: 9.46971
+  m_Radius: 1.0724283
+  m_Height: 9.469709
   m_Direction: 1
-  m_Center: {x: 0, y: 4.2348504, z: -0.23115574}
+  m_Center: {x: -0.9316834, y: 4.234823, z: -0.09374351}
 --- !u!4 &813659872595780382 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 01c16411711a36149b9b6c6bf47d9a62, type: 3}
@@ -9381,6 +9498,10 @@ PrefabInstance:
       value: Arbol_Anim
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 01c16411711a36149b9b6c6bf47d9a62, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 01c16411711a36149b9b6c6bf47d9a62, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -9414,7 +9535,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 01c16411711a36149b9b6c6bf47d9a62, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1162010828804356387}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 01c16411711a36149b9b6c6bf47d9a62, type: 3}
       insertIndex: -1
@@ -9474,10 +9598,10 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 2.1415267
+  m_Radius: 1.0681549
   m_Height: 9.46971
   m_Direction: 1
-  m_Center: {x: 0, y: 4.2348504, z: -0.23115574}
+  m_Center: {x: -0.7984105, y: 4.2348223, z: 0.043805048}
 --- !u!4 &4205835418804127786 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 01c16411711a36149b9b6c6bf47d9a62, type: 3}

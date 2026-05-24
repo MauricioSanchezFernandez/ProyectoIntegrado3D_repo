@@ -1,10 +1,12 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class CarDeath : MonoBehaviour
+public class PlayerDeath : MonoBehaviour
 {
     public GameObject explosionFX;
     public CameraShake cameraShake;
+
+    public AudioSource explosionSound;
 
     public string gameOverSceneName = "GameOver";
 
@@ -24,21 +26,12 @@ public class CarDeath : MonoBehaviour
     {
         dead = true;
 
-        // Guardar puntuación
-        DistanceCounter distanceCounter = FindObjectOfType<DistanceCounter>();
-
-        if (distanceCounter != null)
-        {
-            distanceCounter.SaveScore();
-        }
-
-        // parar movimiento del coche
+        //  parar coche
         CarMovement movement = GetComponent<CarMovement>();
-
         if (movement != null)
             movement.enabled = false;
 
-        // explosión
+        //  explosión
         if (explosionFX != null)
         {
             explosionFX.SetActive(false);
@@ -53,13 +46,19 @@ public class CarDeath : MonoBehaviour
             }
         }
 
-        // shake cámara
+        //  sonido explosión
+        if (explosionSound != null)
+        {
+            explosionSound.Play();
+        }
+
+        //  shake cámara
         if (cameraShake != null)
         {
             cameraShake.Shake();
         }
 
-        // ir a Game Over
+        //  game over
         Invoke("LoadGameOver", 1f);
     }
 

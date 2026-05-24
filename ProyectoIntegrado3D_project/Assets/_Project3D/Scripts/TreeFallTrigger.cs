@@ -20,26 +20,24 @@ public class TreeFallTrigger : MonoBehaviour
         }
     }
 
-    void FallTrees()
+   void FallTrees()
+{
+    foreach (Rigidbody treeRb in trees)
     {
-        foreach (Rigidbody treeRb in trees)
-        {
-            if (treeRb == null) continue;
+        if (treeRb == null) continue;
 
-            treeRb.isKinematic = false;
-            treeRb.useGravity = true;
+        treeRb.isKinematic = false;
+        treeRb.useGravity = true;
 
-            // reset físico
-            treeRb.linearVelocity = Vector3.zero;
-            treeRb.angularVelocity = Vector3.zero;
+        // reset físico
+        treeRb.linearVelocity = Vector3.zero;
+        treeRb.angularVelocity = Vector3.zero;
 
-            // 💥 caída hacia la carretera con variación
-            Vector3 forceDir = (Vector3.right * Random.Range(-1f, 1f)) + Vector3.down * 0.5f;
+        //  empujar SIEMPRE hacia carretera
+        treeRb.AddForce(Vector3.right * fallForce, ForceMode.Impulse);
 
-            treeRb.AddForce(forceDir.normalized * fallForce, ForceMode.Impulse);
-
-            // 🌪️ giro natural
-            treeRb.AddTorque(Random.insideUnitSphere * torqueForce, ForceMode.Impulse);
-        }
+        //  rotación CONTROLADA
+        treeRb.AddTorque(Vector3.forward * torqueForce, ForceMode.Impulse);
     }
+}
 }
