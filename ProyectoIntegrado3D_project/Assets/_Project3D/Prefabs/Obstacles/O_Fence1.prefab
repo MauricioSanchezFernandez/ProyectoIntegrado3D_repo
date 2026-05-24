@@ -8,6 +8,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -9185540658394202890, guid: 72f71fbcccdf6d841bc7cb2420000a6c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 72f71fbcccdf6d841bc7cb2420000a6c, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.38744998
@@ -68,6 +72,10 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: ab97647e8f3dc8640b56111d0aebe378, type: 2}
+    - target: {fileID: 651269179546385299, guid: 72f71fbcccdf6d841bc7cb2420000a6c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 72f71fbcccdf6d841bc7cb2420000a6c, type: 3}
       propertyPath: m_Name
       value: O_Fence1
@@ -75,6 +83,14 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 72f71fbcccdf6d841bc7cb2420000a6c, type: 3}
       propertyPath: m_TagString
       value: Obstacle
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 72f71fbcccdf6d841bc7cb2420000a6c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 2686488316533671255, guid: 72f71fbcccdf6d841bc7cb2420000a6c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 3855759456675320329, guid: 72f71fbcccdf6d841bc7cb2420000a6c, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'

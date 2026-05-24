@@ -8,6 +8,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -8931884860115427954, guid: d77ea8cd29af5424a8321b646584593a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d77ea8cd29af5424a8321b646584593a, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.4517927
@@ -60,6 +64,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -6601650744715091290, guid: d77ea8cd29af5424a8321b646584593a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: -2716655602892440115, guid: d77ea8cd29af5424a8321b646584593a, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -75,6 +83,14 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: d77ea8cd29af5424a8321b646584593a, type: 3}
       propertyPath: m_TagString
       value: Obstacle
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d77ea8cd29af5424a8321b646584593a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4372998664921086139, guid: d77ea8cd29af5424a8321b646584593a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 7131508917450655927, guid: d77ea8cd29af5424a8321b646584593a, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
